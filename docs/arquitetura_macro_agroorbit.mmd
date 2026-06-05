@@ -1,8 +1,0 @@
-flowchart LR
-    U[Usuario / Professor] --> VM[Azure VM Ubuntu]
-    GH[GitHub + README + How To] --> VM
-    VM --> APP[Container App: agroorbit-app-rm563901]
-    APP --> DB[Container DB: agroorbit-db-rm563901]
-    DB --> VOL[(Volume nomeado: agroorbit_postgres_data)]
-    APP -. rede Docker .- NET[agroorbit_network]
-    DB -. rede Docker .- NET

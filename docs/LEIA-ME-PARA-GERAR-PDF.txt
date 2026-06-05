@@ -1,7 +1,0 @@
-Abra o arquivo PDF_ENTREGA_DEVOPS_MODELO.docx no Word.
-Substitua:
-- COLE_AQUI_O_LINK_DO_GITHUB
-- COLE_AQUI_O_LINK_DO_VIDEO
-- IP_PUBLICO_DA_VM
-
-Depois exporte como PDF e envie no portal.
