@@ -98,3 +98,84 @@ docker compose down -v
 ```text
 https://github.com/Wiclif06/GSDevOps-Cloud.git
 ```
+## Evidência 1 - Repositório GitHub
+
+Repositório contendo todo o código-fonte, Dockerfile, Docker Compose, documentação e estrutura do projeto.
+
+![GitHub](docs/github.png)
+
+---
+
+## Evidência 2 - Máquina Virtual Azure
+
+Máquina Virtual Ubuntu criada na Microsoft Azure para hospedagem da aplicação.
+
+![Azure VM](docs/azure.png)
+
+---
+
+## Evidência 3 - Docker Compose
+
+Arquivo responsável pela orquestração dos containers da aplicação e banco de dados.
+
+![Docker Compose](docs/docker-compose.png)
+
+---
+
+## Evidência 4 - Dockerfile
+
+Dockerfile utilizado para geração da imagem personalizada da aplicação Spring Boot.
+
+![Dockerfile](docs/dockerfile.png)
+
+---
+
+## Evidência 5 - Containers em Execução
+
+Comprovação dos containers da aplicação e do banco PostgreSQL executando na Azure VM.
+
+![Docker PS](docs/docker-ps.png)
+
+---
+
+## Evidência 6 - Conexão SSH com a VM
+
+Acesso remoto realizado na máquina virtual hospedada na Azure.
+
+![SSH VM](docs/ssh-vm.png)
+
+---
+
+## Evidência 7 - Logs da Aplicação
+
+Inicialização da aplicação Spring Boot demonstrando execução correta dentro do container Docker.
+
+![Logs da Aplicação](docs/logs-app.png)
+
+---
+
+## Evidência 8 - Usuário Não Root
+
+Execução da aplicação utilizando usuário dedicado, seguindo boas práticas de segurança.
+
+![Usuário Não Root](docs/usuario-nao-root.png)
+
+---
+
+## Evidência 9 - Banco PostgreSQL
+
+Validação do banco de dados contendo tabelas criadas automaticamente pelo Hibernate e dados persistidos.
+
+![PostgreSQL](docs/postgresql.png)
+
+---
+
+## Evidência 10 - Swagger Público
+
+Documentação OpenAPI acessível publicamente através do IP da máquina virtual Azure.
+
+## URL
+
+```text
+http://52.242.241.4:8080/swagger-ui/index.html
+```
