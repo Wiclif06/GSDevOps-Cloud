@@ -1,0 +1,35 @@
+COMANDOS OFICIAIS - DEVOPS + CLOUD
+
+git clone LINK_DO_GITHUB
+cd NOME_DO_REPOSITORIO
+
+docker compose up -d --build
+docker ps
+
+docker logs agroorbit-app-rm563901
+docker logs agroorbit-db-rm563901
+
+docker exec -it agroorbit-app-rm563901 sh
+pwd
+ls -l
+whoami
+exit
+
+docker exec -it agroorbit-db-rm563901 psql -U postgres -d agroorbit
+\dt
+SELECT * FROM tb_user;
+SELECT * FROM tb_farm;
+SELECT * FROM tb_crop_area;
+SELECT * FROM tb_sensor;
+SELECT * FROM tb_satellite_data;
+SELECT * FROM tb_climate_alert;
+\q
+
+# Swagger
+http://IP_PUBLICO_DA_VM:8080/swagger-ui.html
+
+# parar
+docker compose down
+
+# apagar volume
+docker compose down -v

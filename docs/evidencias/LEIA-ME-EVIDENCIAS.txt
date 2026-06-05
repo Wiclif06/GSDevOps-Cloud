@@ -1,0 +1,14 @@
+Nesta pasta você pode salvar os prints/evidências da entrega:
+
+01_github_readme.png
+02_arquitetura_macro.png
+03_docker_compose_up.png
+04_docker_ps.png
+05_logs_app.png
+06_logs_db.png
+07_exec_app_pwd_ls_whoami.png
+08_exec_db_select.png
+09_swagger_cloud.png
+10_youtube_video_link.png
+
+O vídeo deve mostrar tudo isso ao vivo, em nuvem.

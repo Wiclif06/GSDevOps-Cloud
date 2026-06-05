@@ -1,0 +1,51 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: agroorbit-db-rm563901
+    restart: always
+    environment:
+      POSTGRES_DB: agroorbit
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - agroorbit_postgres_data:/var/lib/postgresql/data
+    networks:
+      - agroorbit_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d agroorbit"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agroorbit-app-rm563901:1.0
+    container_name: agroorbit-app-rm563901
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/agroorbit
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      JWT_SECRET: agroorbit-cloud-secret-563901
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - agroorbit_network
+
+volumes:
+  agroorbit_postgres_data:
+    name: agroorbit_postgres_data
+
+networks:
+  agroorbit_network:
+    name: agroorbit_network
+    driver: bridge
