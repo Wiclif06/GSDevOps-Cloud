@@ -59,7 +59,7 @@ public class CropArea {
     private GeoLocation location;
 
     @Lob
-    @Column(name = "ds_boundary_geojson", columnDefinition = "CLOB")
+    @Column(name = "ds_boundary_geojson", columnDefinition = "TEXT")
     private String boundaryGeoJson;
 
     @Enumerated(EnumType.STRING)
