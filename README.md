@@ -179,3 +179,6 @@ Documentação OpenAPI acessível publicamente através do IP da máquina virtua
 ```text
 http://52.242.241.4:8080/swagger-ui/index.html
 ```
+```text
+https://youtu.be/IX8fcVLY5KU
+```
